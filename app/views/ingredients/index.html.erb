@@ -1,0 +1,18 @@
+<h1>Ingredients</h1>
+<ul>
+<% @ingredients.each do |ingredient| %>
+  <li><%= ingredient.name %></li>
+<% end %>
+</ul>
+
+<script type="text/javascript">
+  for (let i = 1; i <= 5; i++) {
+    let key = "ingredient" + i;
+    let ingredientName = localStorage.getItem(key);
+    if (ingredientName) {
+      let li = document.createElement('li');
+      li.innerText = ingredientName;
+      document.getElementsByTagName('ul')[0].appendChild(li)
+    }
+  }
+</script>
