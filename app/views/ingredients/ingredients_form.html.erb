@@ -6,17 +6,5 @@
   <input type="text" name="ingredient3" value="">
   <input type="text" name="ingredient4" value="">
   <input type="text" name="ingredient5" value="">
-  <!-- <input type="submit" name="" value="Submit"> -->
-  <button onclick='onSubmit()' type="button" name="button">Submit</button>
+  <input type="submit" name="" value="Submit">
 </form>
-
-<script type="text/javascript">
-  function onSubmit() {
-    const input = document.getElementsByTagName('input')
-    const values = Array.prototype.filter.call(input, i => i.name.includes('ingredient'));
-    values.forEach(input => {
-      localStorage.setItem(input.name, input.value);
-    });
-    window.location = '/ingredients'
-  }
-</script>

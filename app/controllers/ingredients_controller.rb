@@ -8,7 +8,7 @@ class IngredientsController < ApplicationController
     # binding.pry
     1.upto(5) do |i|
       name = params["ingredient#{i}"]
-      Ingredient.create(name: name)
+      cookies["ingredients#{i}"] = name
     end
     redirect_to '/ingredients'
   end
